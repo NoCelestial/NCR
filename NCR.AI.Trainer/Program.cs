@@ -6,7 +6,21 @@ namespace NCR.AI.Trainer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("News Classification Trainer Started");
+
+            FindTheBestModel();
+
+
+            Console.ResetColor();
+        }
+
+        private static void FindTheBestModel()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\nFinding the Best Model Using AutoML");
+
+
         }
     }
 }

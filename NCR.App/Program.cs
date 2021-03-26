@@ -1,4 +1,5 @@
 ﻿using System;
+using NCR.AI.Model;
 
 namespace NCR.App
 {
@@ -10,7 +11,7 @@ namespace NCR.App
             Console.WriteLine("Program Is Starting ...");
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Please Enter News Headers \nIf Input Empty Default Headers Is Run");
+            Console.WriteLine("\nPlease Enter News Headers \nIf Input Empty Default Headers Is Run");
 
             string[] headers = new string[]
             {
@@ -22,10 +23,14 @@ namespace NCR.App
 
             foreach (string header in headers)
             {
-                var CalculatedResult = "";
+                var CalculatedResult = ConsumeModel.Predict(header);
 
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine($"\n{CalculatedResult} : {header}");
 
             }
+
+            Console.ResetColor();
         }
     }
 }

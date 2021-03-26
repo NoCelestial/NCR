@@ -7,12 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCR.App", "NCR.App\NCR.App.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCR.AI.Model", "NCR.AI.Model\NCR.AI.Model.csproj", "{64426873-0286-40CB-B7F3-73605CB29FE8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCR.AI.Trainer", "NCR.AI.Trainer\NCR.AI.Trainer.csproj", "{8C6A8741-3A65-42C4-9D7D-2B8AC3CD2E55}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{55A07E42-AA5D-4F00-BA9E-05ED04D5ACFC}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCR.AI.Trainer", "NCR.AI.Trainer\NCR.AI.Trainer.csproj", "{8964C099-EEEA-4578-854A-A7E0468C4F82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +28,10 @@ Global
 		{64426873-0286-40CB-B7F3-73605CB29FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64426873-0286-40CB-B7F3-73605CB29FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64426873-0286-40CB-B7F3-73605CB29FE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C6A8741-3A65-42C4-9D7D-2B8AC3CD2E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C6A8741-3A65-42C4-9D7D-2B8AC3CD2E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C6A8741-3A65-42C4-9D7D-2B8AC3CD2E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C6A8741-3A65-42C4-9D7D-2B8AC3CD2E55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8964C099-EEEA-4578-854A-A7E0468C4F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8964C099-EEEA-4578-854A-A7E0468C4F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8964C099-EEEA-4578-854A-A7E0468C4F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8964C099-EEEA-4578-854A-A7E0468C4F82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

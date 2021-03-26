@@ -7,7 +7,7 @@ using Microsoft.ML.Data;
 
 namespace NCR.AI.Model
 {
-    class ModelOutput
+    public class ModelOutput
     {
         [ColumnName("PredictedLabel")]
         public string Category { get; set; }

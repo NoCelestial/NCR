@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,6 +7,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NCR.AI.Model\NCR.AI.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\uci-news-aggregator.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cache\" />
   </ItemGroup>
 
 </Project>

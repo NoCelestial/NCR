@@ -7,7 +7,7 @@ using Microsoft.ML.Data;
 
 namespace NCR.AI.Model
 {
-    class ModelInput
+    public class ModelInput
     {
         [LoadColumn(1)]
         public string Title { get; set; }

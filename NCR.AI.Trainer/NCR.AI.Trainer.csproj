@@ -19,4 +19,8 @@
     <Folder Include="Cache\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SHA.BeautifulConsoleColor.Core" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>

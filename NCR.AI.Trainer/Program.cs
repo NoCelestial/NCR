@@ -20,24 +20,14 @@ namespace NCR.AI.Trainer
             BCCConsole.Write(BCCConsoleColor.Blue,false, "News Classification Trainer Started");
 
             //FindTheBestModel();
-            //TrainModel();
+            TrainModel();
         }
 
-        public static ModelOutput Predict(string title,MLContext mlContext,ITransformer pipeLine)
-        {
-            var predictEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(pipeLine);
-            var predict = predictEngine.Predict(new ModelInput() {Title = title});
-            return new ModelOutput()
-            {
-                Category = predict.Category,
-                Score = predict.Score
-            };
-        }
         private static void TrainModelWithUnbalancedData()
         {
             BCCConsole.Write(BCCConsoleColor.Gray, false, "Trainer Base Is Started ...");
             var mlContext = new MLContext(0);
-            string trainDataPath = "Data\\uci-news-aggregator.csv";
+            string trainDataPath = Environment.CurrentDirectory+@"\Data\uci-news-aggregator.csv";
             string trainCachePath = @"Cache\";
 
             string unbalancedDataFile = "Data\\Unbalanced.csv";
@@ -81,7 +71,7 @@ namespace NCR.AI.Trainer
             mlContext.Model.Save(finalModel, trainDataView.Schema, modelPath);
             BCCConsole.Write(BCCConsoleColor.Green, false, "Saved !");
         }
-        public static List<object> TrainModel()
+        private static void TrainModel()
         {
             BCCConsole.Write(BCCConsoleColor.Gray,false,"Trainer Base Is Started ...");
             var mlContext = new MLContext(0);
@@ -124,7 +114,6 @@ namespace NCR.AI.Trainer
             BCCConsole.Write(BCCConsoleColor.Yellow,false,"Saving Model . . .");
             mlContext.Model.Save(finalModel,trainDataView.Schema,modelPath);
             BCCConsole.Write(BCCConsoleColor.Green,false,"Saved !");
-            return new List<object>(){mlContext,trainingPipeline};
         }
 
         private static void FindTheBestModel()
@@ -133,6 +122,7 @@ namespace NCR.AI.Trainer
             var mlContext = new MLContext(0);
             string trainDataPath = @"Data\uci-news-aggregator.csv";
             string trainCachePath = @"Cache\";
+            string bestModelPath = @"Model\BestModelRun.zip";
             var trainDataView = mlContext.Data.LoadFromTextFile<ModelInput>(
                 trainDataPath,
                 hasHeader:true,

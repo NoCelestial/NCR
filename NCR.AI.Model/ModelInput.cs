@@ -11,7 +11,5 @@ namespace NCR.AI.Model
     {
         [LoadColumn(1)]
         public string Title { get; set; }
-        [LoadColumn(4)]
-        public string Category { get; set; }
     }
 }

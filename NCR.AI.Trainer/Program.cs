@@ -75,7 +75,7 @@ namespace NCR.AI.Trainer
         {
             BCCConsole.Write(BCCConsoleColor.Gray,false,"Trainer Base Is Started ...");
             var mlContext = new MLContext(0);
-            string trainDataPath = "Data\\uci-news-aggregator.csv";
+            string trainDataPath =Environment.CurrentDirectory+ "\\Trainer\\Data\\uci-news-aggregator.csv";
             string trainCachePath = @"Cache\";
             var trainDataView = mlContext.Data.LoadFromTextFile<ModelInput>(
                 trainDataPath,
